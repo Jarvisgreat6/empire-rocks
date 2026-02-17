@@ -398,12 +398,24 @@
 
         .about-image {
             aspect-ratio: 3/4;
-            background:
-                linear-gradient(135deg, rgba(196, 162, 101, 0.1), transparent),
-                url('about.jpeg') center center / cover no-repeat,
-                var(--charcoal);
             position: relative;
             overflow: hidden;
+            background: var(--charcoal);
+        }
+
+        .about-image-bg {
+            position: absolute;
+            inset: 0;
+            background: url('about.jpeg') center center / cover no-repeat;
+            filter: saturate(0.35) brightness(0.85);
+        }
+
+        .about-image-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(196, 162, 101, 0.06);
+            mix-blend-mode: color;
         }
 
         .about-image::before {
@@ -411,19 +423,7 @@
             position: absolute;
             inset: 15px;
             border: 1px solid rgba(196, 162, 101, 0.2);
-        }
-
-        .about-image-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-style: italic;
-            color: rgba(196, 162, 101, 0.4);
-            letter-spacing: 0.2em;
-            white-space: nowrap;
+            z-index: 2;
         }
 
         /* ===== COLLECTIONS ===== */
@@ -449,7 +449,28 @@
             background: var(--charcoal);
             overflow: hidden;
             cursor: pointer;
-            group: true;
+        }
+
+        .collection-card-img {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            filter: saturate(0.35) brightness(0.85);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+
+        .collection-card-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(196, 162, 101, 0.06);
+            mix-blend-mode: color;
+        }
+
+        .collection-card:hover .collection-card-img {
+            transform: scale(1.03);
         }
 
         .collection-card-bg {
@@ -975,7 +996,7 @@
     <section id="about">
         <div class="about">
             <div class="about-image">
-                <span class="about-image-text">Your image here</span>
+                <div class="about-image-bg"></div>
             </div>
             <div class="about-text reveal">
                 <p class="section-label">Our Story</p>
@@ -1000,7 +1021,8 @@
                 <h2 class="section-title">Discover Your Piece</h2>
             </div>
             <div class="collections-grid">
-                <div class="collection-card reveal" style="background: url('rings.jpeg') center center / cover no-repeat;">
+                <div class="collection-card reveal">
+                    <div class="collection-card-img" style="background-image: url('rings.jpeg');"></div>
                     <div class="collection-shimmer"></div>
                     <div class="collection-card-bg"></div>
                     <div class="collection-card-inner">
@@ -1009,7 +1031,8 @@
                         <p>Engagement &middot; Statement &middot; Bands</p>
                     </div>
                 </div>
-                <div class="collection-card reveal" style="background: url('necklaces.jpeg') center center / cover no-repeat;">
+                <div class="collection-card reveal">
+                    <div class="collection-card-img" style="background-image: url('necklaces.jpeg');"></div>
                     <div class="collection-shimmer"></div>
                     <div class="collection-card-bg"></div>
                     <div class="collection-card-inner">
@@ -1018,7 +1041,8 @@
                         <p>Pendants &middot; Chains &middot; Layering</p>
                     </div>
                 </div>
-                <div class="collection-card reveal" style="background: url('bracelets.jpeg') center center / cover no-repeat;">
+                <div class="collection-card reveal">
+                    <div class="collection-card-img" style="background-image: url('bracelets.jpeg');"></div>
                     <div class="collection-shimmer"></div>
                     <div class="collection-card-bg"></div>
                     <div class="collection-card-inner">
