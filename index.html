@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --gold: #C4A265;
-            --gold-light: #D4B87A;
-            --gold-dark: #A68B4B;
+            --gold: #FEFEFE;
+            --gold-light: #FFFFFF;
+            --gold-dark: #E0E0E0;
             --black: #0A0A0A;
             --off-black: #141414;
             --charcoal: #1E1E1E;
@@ -91,7 +91,7 @@
             background: rgba(10, 10, 10, 0.95);
             backdrop-filter: blur(20px);
             padding: 1rem 3rem;
-            border-bottom: 1px solid rgba(196, 162, 101, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .nav-logo {
@@ -186,8 +186,8 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(196, 162, 101, 0.06);
-            mix-blend-mode: color;
+            background: rgba(255, 255, 255, 0.03);
+            mix-blend-mode: luminosity;
         }
 
         .hero-grain {
@@ -203,7 +203,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(196, 162, 101, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
             transform: translateY(-50%);
         }
 
@@ -414,15 +414,15 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(196, 162, 101, 0.06);
-            mix-blend-mode: color;
+            background: rgba(255, 255, 255, 0.03);
+            mix-blend-mode: luminosity;
         }
 
         .about-image::before {
             content: '';
             position: absolute;
             inset: 15px;
-            border: 1px solid rgba(196, 162, 101, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             z-index: 2;
         }
 
@@ -465,8 +465,8 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(196, 162, 101, 0.06);
-            mix-blend-mode: color;
+            background: rgba(255, 255, 255, 0.03);
+            mix-blend-mode: luminosity;
         }
 
         .collection-card:hover .collection-card-img {
@@ -516,20 +516,20 @@
             content: '';
             position: absolute;
             inset: 0;
-            border: 1px solid rgba(196, 162, 101, 0);
+            border: 1px solid rgba(255, 255, 255, 0);
             transition: border-color 0.5s ease;
             z-index: 4;
             pointer-events: none;
         }
 
         .collection-card:hover::after {
-            border-color: rgba(196, 162, 101, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         .collection-shimmer {
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at 50% 50%, rgba(196, 162, 101, 0.06), transparent 70%);
+            background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.03), transparent 70%);
             z-index: 1;
         }
 
@@ -621,7 +621,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(196, 162, 101, 0.05), transparent);
+            background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.03), transparent);
         }
 
         .marquee-item-label {
@@ -631,7 +631,7 @@
             font-family: var(--font-display);
             font-size: 1rem;
             font-style: italic;
-            color: rgba(196, 162, 101, 0.5);
+            color: rgba(255, 255, 255, 0.4);
         }
 
         @keyframes marquee {
@@ -703,12 +703,12 @@
         .location-card {
             text-align: center;
             padding: 3rem 2rem;
-            border: 1px solid rgba(196, 162, 101, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.15);
             transition: border-color 0.4s ease;
         }
 
         .location-card:hover {
-            border-color: rgba(196, 162, 101, 0.4);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         .location-card-icon {
@@ -743,7 +743,7 @@
             position: absolute;
             inset: 0;
             background: 
-                radial-gradient(ellipse at 50% 50%, rgba(196, 162, 101, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%),
                 var(--black);
         }
 
@@ -797,7 +797,7 @@
 
         /* ===== FOOTER ===== */
         footer {
-            border-top: 1px solid rgba(196, 162, 101, 0.15);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
             padding: 3rem;
             display: flex;
             justify-content: space-between;
