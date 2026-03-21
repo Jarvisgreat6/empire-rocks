@@ -176,18 +176,12 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.85) 100%),
-                url('hero.jpeg') center center / cover no-repeat;
+            background: url('hero.jpeg') center center / cover no-repeat;
             filter: saturate(1.0) brightness(1.0);
         }
 
         .hero-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.05);
-            mix-blend-mode: normal;
+            display: none;
         }
 
         .hero-grain {
@@ -411,10 +405,7 @@
         }
 
         .about-image-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: transparent;
+            display: none;
         }
 
         .about-image::before {
@@ -461,10 +452,7 @@
         }
 
         .collection-card-img::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: transparent;
+            display: none;
         }
 
         .collection-card:hover .collection-card-img {
@@ -474,7 +462,7 @@
         .collection-card-bg {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, transparent 40%, rgba(255, 255, 255, 0.9) 100%);
+            background: linear-gradient(180deg, transparent 70%, rgba(255, 255, 255, 0.95) 100%);
             z-index: 2;
         }
 
