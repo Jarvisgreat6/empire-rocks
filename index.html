@@ -179,15 +179,15 @@
             background:
                 linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.3) 70%, rgba(255, 255, 255, 0.85) 100%),
                 url('hero.jpeg') center center / cover no-repeat;
-            filter: saturate(0.3) brightness(1.1);
+            filter: saturate(1.0) brightness(1.0);
         }
 
         .hero-bg::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(255, 255, 255, 0.15);
-            mix-blend-mode: luminosity;
+            background: rgba(255, 255, 255, 0.05);
+            mix-blend-mode: normal;
         }
 
         .hero-grain {
@@ -407,14 +407,14 @@
             position: absolute;
             inset: 0;
             background: url('about.jpeg') center center / cover no-repeat;
-            filter: saturate(0.3) brightness(1.05);
+            filter: saturate(1.0) brightness(1.0);
         }
 
         .about-image-bg::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.02);
+            background: transparent;
         }
 
         .about-image::before {
@@ -456,7 +456,7 @@
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-            filter: saturate(0.3) brightness(1.05);
+            filter: saturate(1.0) brightness(1.0);
             transition: filter 0.5s ease, transform 0.5s ease;
         }
 
@@ -464,7 +464,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.02);
+            background: transparent;
         }
 
         .collection-card:hover .collection-card-img {
